@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">    
+    <head>
+        <title>NLS: Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        
+        <script>
+        (function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 10
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+        </script>
+        
+    </head>
+    <body>
+        <div class="exp">
+        <a href="index.html"> <img width="150vh" class="logo" src="images/unnamed%5B1%5D.png"></a>
+        </div>
+        <div class="div1">
+        <ul>
+             <a class="a1" href="">Home</a>
+             <a class="a1" href="movies.html">Movies/TV</a>
+             <a class="a1" href="videogames.html">Video Games </a>
+             <a class="a1" href="music.html">Music</a>
+             <a class="a1" href="contact.html">Contact</a>
+            
+            <div class="dropdown">
+  <span class="t111">Subscribe To Us!</span>
+  <div class="dropdown-content">
+  <a class="al" href="sign-up.html">Subscriptions</a>
+  </div>
+</div>
+      
+        </ul>
+          
+        </div>
+        <div class="allo">
+    <h1 class="h1-1">Welcome To NoLimitStreaming<br>Where All Possibilities Are Limitless</h1>  
+            <br><br>
+        <div class="alla">
+    <div class="slider" id="main-slider">
+    <div class="slider-wrapper">
+		<img src="imagesmain/Handmaid_stail%20frame.png" alt="First" class="slide" />
+		<img src="imagesmain/Lucifer%20Frame.png" alt="Second" class="slide" />
+		<img src="imagesmain/Moneyheist%20Frame.png" alt="Third" class="slide" />
+        <img src="imagesmain/Kodak%20Black%20Calling%20my%20spirit.%20Frame.png" alt="fourth" class="slide" />
+        <img src="imagesmain/ozuna_sepreparo.jpg" alt="fifth" class="slide" />
+        <img src="imagesmain/Jello%20by%20Prettymuch%20only%20one%20nsinger%20of%20the%20group.gif" alt="sixth" class="slide" />
+        <img src="imagesmain/BFV.jpg" alt="seventh" class="slide" />
+        <img src="imagesmain/spiderman.jpg" alt="eighth" class="slide" />
+        <img src="imagesmain/skkyrim.png" alt="ninth" class="slide" />
+    </div>
+</div> 
+           
+            <h1 class="h1-3">Recommended Entertainment</h1>
+             <div class="allofit">
+         <h2 class="h2-2">Trending</h2>
+        <div class="all2">
+         <div class="t1">
+             
+        <img src="gif/ace%20gif.gif"  style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="thumbnail/bo4.jpg">
+           <h3>Cops Vs Terrorists </h3>
+            </div>
+            
+         <div id="t1" class="t1">
+             <img src="gif/Deadpool.gif" style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="thumbnail/Undying%20Red%20Suit%20Guy.jpg">
+             <h3>Red Man</h3>
+        </div>
+        
+        <div class="all1">
+        <div class="t1">
+         <img src="Gifs&ImagesIDidntGetToYet/Movies/The%20Nun.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="Gifs&ImagesIDidntGetToYet/Movies/Hellboy%20Frame.png">
+            <h3>Hell</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+        <img src="Gifs&ImagesIDidntGetToYet/Movies/Ant-Man-and-The-Wasp.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="Gifs&ImagesIDidntGetToYet/Movies/Alpha%20Frame.png">
+             <h3>Vampiric Robot </h3>
+            </div>
+        </div>
+            
+         <div id="t2" class="t1">
+         <img src="gif/Nirvana.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="thumbnail/download.jpg">
+             <h3>Cobain</h3>
+            </div>
+            
+        </div>
+        
+         <h2 class="h2-2">Music</h2>
+    <div class="all2">
+         <div class="t1">
+        <img src="imagesmain/jgif.gif"  style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/j.cole.jpg">
+             <h3>The King</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+             <img src="imagesmain/kendrickgif.gif" style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/kendrick.jpg">
+             <h3>God</h3>
+        </div>
+            
+        <div class="all1">
+        <div class="t1">
+         <img src="imagesmain/kkgif.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/kanye.jpg">
+            <h3>Insane</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+        <img src="imagesmain/pgif.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/prince.jpg">
+             <h3>Royalty</h3>
+            </div>
+        </div>
+            
+         <div id="t2" class="t1">
+         <img src="imagesmain/mgif.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/micheal.jpg">
+             <h3>Epitome Of Music</h3>
+            </div>
+            
+        </div>
+        
+         
+         <h2 class="h2-2">Gaming</h2>
+         <div class="all2">
+         <div class="t1">
+        <img src="imagesmain/god-of-war-gif-1.gif"  style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/god.jpg">
+             <h3>BOY!</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+             <img src="imagesmain/gtagif.gif" style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/gta.jpg">
+             <h3>Bang-Bang</h3>
+        </div>
+            
+        <div class="all1">
+        <div class="t1">
+         <img src="imagesmain/spidermangta.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/spider.jpg">
+            <h3>Spidey Senses</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+        <img src="imagesmain/CoolScrawnyDarwinsfox-small.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/whatever.jpg">
+             <h3>I Don't Even know</h3>
+            </div>
+        </div>
+            
+         <div id="t2" class="t1">
+         <img src="imagesmain/original.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/tombraider.jpg">
+             <h3>Adventurous</h3>
+            </div>
+            
+        </div>
+        
+
+         <h2 class="h2-2">Movies/TV Shows</h2>
+        <div class="all2">
+         <div class="t1">
+        <img src="imagesmain/F5f7.gif" style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/3003.jpg">
+             <h3>Slaughter</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+             <img src="imagesmain/11750631.gif" style="width: 17.9vh; height: 19vh; position: relative; top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/BirdBox_Unit_1.jpg">
+             <h3>See No Evil</h3>
+        </div>
+            
+        <div class="all1">
+        <div class="t1">
+         <img src="imagesmain/walking-dead-sam-bite.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/https___blueprint-api-production.s3.amazonaws.com_uploads_card_image_633593_a28eec96-2a65-4fda-af88-aec39218a0ef.jpg">
+            <h3>Deathly Hollows</h3>
+            </div>
+            
+         <div id="t1" class="t1">
+        <img src="imagesmain/LeadingOfficialKitfox-max-1mb.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/shows-to-stream-john-wick-2.jpg">
+             <h3>Badassery</h3>
+            </div>
+        </div>
+            
+         <div id="t2" class="t1">
+         <img src="imagesmain/flash.gif"  style="width: 17.9vh; height: 19vh; position: relative;  top: 0.5vh;">
+        <img class="imgt" style="width: 18.0vh; height: 20.2vh; position: relative; top: -19.5vh" src="imagesmain/the_flash.jpg">
+             <h3>Lightning Tracker</h3>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+         
+        </div>
+            <div id="div2" class="div2">
+        <h1 class="h1-2"> NoLimitStreaming </h1>
+ <div class="div3">
+  <a class="a2" href="#"><span>Facebook</span></a>
+  <a class="a2" href="#"><span>Twitter</span></a>
+  <a class="a2" href="#"><span>Google+</span></a>
+  <a class="a2" href="#"><span>Github</span></a>
+</div>
+        <hr>
+        <h2 class="h2-1">Help</h2>
+            
+        <h2 class="h2-1">Unsubscribe</h2>
+        
+        <h2 class="h2-1">Privacy &amp; Policies</h2>
+            
+        <p class="p-1">NoLimitStreaming<br><br>1640 N East St Harrisburg, PA 17111</p>
+        
+        </div>
+        <br>
+    </body>
+</html>
